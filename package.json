@@ -7,10 +7,11 @@
     "test": "npm-run-all test:*",
     "test:html": "globstar nu-html-checker *.html",
     "init-project": "npm install && npm-run-all init:*",
+    "init:github-initial": "curl ",
     "init:dirs": "mkdirp 0-css images/icons js",
     "init:files": "touch README.md index.html js/script.js",
     "init:sass-bourbon": "bourbon install --path 1-sass/0-plugins",
-    
+    "init:sass-breakpoint": "breakpoint install --path 1-sass/0-plugins",
     "build": "npm-run-all build:* test",
     "build:clean": "globstar rimraf css/*.css",
     "build:sass": "node-sass --output-style compact -o css sass",
